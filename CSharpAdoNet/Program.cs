@@ -81,14 +81,25 @@ namespace CSharpAdoNet
                     {
                         DeletarCliente(idOp);
                     }
-                    //Write("Informe um nome: ");
-                    //nome = ReadLine();
-
-
                     break;
                 case 5:
                     Title = "Visualização Cliente";
                     WriteLine("==================================  VER DETALHER DE CLIENTES ==================================");
+                    ListarClientes();
+
+                    Write("Selecione um cliente pelo ID: ");
+                     idOp = Convert.ToInt32(ReadLine());
+                    //Trazendo dados para a Tupla
+                    ( _id,  _nome,  _email) = SelecionarCliente(idOp);
+                    Clear();
+
+                    Title = "Visualização de Cliente - " + _nome;
+                    WriteLine($"================================== VISUALIZAÇÃO DE CLIENTE - {_nome} ==================================");
+
+                    WriteLine("ID: {0}",_id);
+                    WriteLine("Nome: {0}", _nome);
+                    WriteLine("E-mail: {0}", _email);
+
                     break;
                 default:
                     Title = "Opção invalida";
