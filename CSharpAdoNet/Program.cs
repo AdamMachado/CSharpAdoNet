@@ -7,7 +7,6 @@ namespace CSharpAdoNet
     {
         static void Main(string[] args)
         {
-            SalvarCliente("ADam", "Adam");
             WriteLine("================================== CONTROLE DE CLIENTES ==================================");
             WriteLine("Selecione uma opção");
             WriteLine("1 - Listar");
